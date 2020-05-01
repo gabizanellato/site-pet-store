@@ -1,0 +1,88 @@
+.row,
+.column {
+  box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.column {
+  position: relative;
+  float: left;
+}
+
+.column + .column {
+  margin-left: 1.6%;
+}
+
+.grid-1 	{width: 6.99999%;}
+.grid-2 	{width: 16.9999%;}
+.grid-3 	{width: 23.88888%;}
+.grid-4 	{width: 32.33333%;}
+.grid-5 	{width: 40.7777%;}
+.grid-6 	{width: 49.22222%;}
+.grid-7 	{width: 57.6666%;}
+.grid-8 	{width: 66.2222%;}
+.grid-9 	{width: 74.6666%;}
+.grid-10 	{width: 83.1111%;}
+.grid-11 	{width: 91.6666%;}
+.grid-12 	{
+  width: 100%;
+  margin-left: 0
+}
+
+@media only screen and (max-width: 550px) {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12 {
+    width: auto;
+    float: none;
+  }
+
+  .column + .column {
+    margin-left: 0;
+  }
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+}
+
+/* .container:after, .container:before {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+  margin-right: 18px;
+  position: relative;
+}
+
+@media (min-width: 1170px) {
+  .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12{
+    float: left;
+  } */ 
