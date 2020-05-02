@@ -148,17 +148,148 @@
 	position: relative;
 }
 
-.img-arrow-right{
-	right: 0;
+
+.section-items{
+	background-color: #ffa200;
+	padding: 10px 0px;
 }
 
-.img-arrow, .img-arrow-right{
+
+.section-products-content{
+	padding: 30px 0;
+	overflow: hidden;
+}
+
+.title{
+	font-family: "Montserrat";
+	font-size: 24px;
+	color: #7f7f7f;	
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+
+.item-product{
+	margin-bottom: 40px;
+}
+
+.section-products-content-items{
+	overflow: hidden;
+	margin-top: 28px;
+	text-align: center;
+	font-size: 14px;
+	color: #7f7f7f;
+	font-family: "Montserrat";
+}
+
+.item-product-name{
+	margin: 10px 0;
+}
+
+.item-product-price{
+	font-weight: bold;
+	margin: 10px;
+}
+
+.previous-price{
+	text-decoration:line-through;
+	padding: 2px
+}
+
+.item-product-observation{
+	background-color: #8158c5;
+	border: 1px solid #ffffff;
+	padding: 6px 15px;
+	color: #ffffff;
 	position: absolute;
-	bottom: 10rem;
+	top: 0;
+	left: 0;
+	text-transform: uppercase;
 }
 
-.img-arrow, .img-arrow-right{
-	stroke: #ffa200
+.item-product-image{
+	position: relative;
 }
 
+.item-product-image:hover .item-produt-image-hover{
+	display: block;
+}
+
+.item-produt-image-hover{
+	display: none;
+	background-color:rgba(129, 88, 197, 0.4);
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+	width: 100%;
+	padding: 130px 0;
+	font-weight: bold;
+}
+
+.button{
+	font-size: 12px;
+	color: #ffffff;
+	font-family: "Montserrat";
+	text-align: center;	
+	text-transform: uppercase;
+	padding: 12px 10px;
+	background-color: #ffa200;
+	font-weight: bold;
+}
+
+.first{
+	margin-left: 0 !important;
+}
+
+.button-see-products{
+	text-align: center;
+	margin: 15px 0;
+}
+
+.section-newsletter{
+	background-color: #8158c5;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.benefits-list{
+	overflow: hidden;
+	border-bottom: 2px solid #ffa200;
+}
+
+.benefits-list-text{
+	font-size: 12px;
+	color: #ffffff;
+	font-family: "Montserrat";
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px 0 30px;
 	
+}
+
+.delivery{
+	text-align: center;
+}
+
+.title-news{
+	font-size: 24px;
+	color: #ffffff;
+	font-family: "Montserrat";
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}	
+
+.sign-in-newsletter{
+	padding: 50px 0 0;
+}
+
+.subtitle-news{
+	font-size: 14px;
+	color: #ffffff;
+	font-family: "Montserrat";
+	text-align: center;
+	margin: 20px 0 0;
+}
