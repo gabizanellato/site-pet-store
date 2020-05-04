@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 21" width="11" height="21">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="FOOTER">
+		<g id="loja">
+			<g id="redes">
+				<g id="face com hover">
+					<path id="Shape 2" class="shp0" d="M9.5 4.71L7.51 4.71C7.18 4.71 6.72 4.87 6.72 5.54L6.72 7.33L9.49 7.33L9.17 10.36L6.72 10.36L6.72 19L3.01 19L3.01 10.36L1.25 10.36L1.25 7.32L3.01 7.32L3.01 5.36C3.01 3.95 3.71 1.75 6.75 1.75L9.5 1.76L9.5 4.71Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

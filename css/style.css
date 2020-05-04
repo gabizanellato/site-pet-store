@@ -28,8 +28,8 @@
 	outline: 0;
 }
 
-.search-text img{
-	height: 20px;
+.header-search img{
+	cursor: pointer;
 }	
 
 /* Logo */
@@ -47,13 +47,7 @@
 
 .shopping-cart{
 	position: relative;
-}
-
-.notification{
-	height: 18px;
-	position: absolute;
-	right: 0;
-	top: 0px;
+	cursor: pointer;
 }
 
 .notification-text{
@@ -62,7 +56,10 @@
 	font-size: 10px;
 	position: absolute;
 	right: 2px;
-	top: 3px;
+	top: 0;
+	border-radius: 12px;
+	background-color: #ffa200;
+	padding: 2px;
 }
 
 /* Menu */
@@ -269,27 +266,272 @@
 	
 }
 
-.delivery{
-	text-align: center;
-}
-
 .title-news{
 	font-size: 24px;
 	color: #ffffff;
 	font-family: "Montserrat";
-	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }	
 
 .sign-in-newsletter{
 	padding: 50px 0 0;
+	text-align: center;
 }
 
 .subtitle-news{
 	font-size: 14px;
 	color: #ffffff;
 	font-family: "Montserrat";
-	text-align: center;
 	margin: 20px 0 0;
+}
+
+.newsletter-form, #form-newsletter{
+	overflow: hidden;
+}
+
+#form-newsletter{
+	margin: 80px 0 50px;
+	transform: translate(25%, 0%);
+}
+
+#form-newsletter input{
+	background: none;
+  border: none;
+  border-radius: 0;
+  display: block;
+  font-size: 16px;
+	border-bottom: 1px solid #ffffff;
+	color: #ffffff;
+	font-family: "Montserrat";
+	margin-bottom: 10px;
+	padding: 10px 0;
+	outline: 0;
+}
+
+#form-newsletter ::-webkit-input-placeholder {
+	color: #ffffff;
+}
+
+.btn-form{
+	border: none;
+}
+
+
+.section-footer{
+	padding: 40px 0;
+}
+
+.footer-information{
+	overflow: hidden;
+}
+
+.sociais-networks{
+	margin: 20px 0 10px;
+}
+
+
+.sociais-networks img{
+	padding: 3px 8px;
+	background-color: #7f7f7f;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.twitter{
+	padding: 6px 5px !important
+}
+
+.instagram{
+	padding: 4px 5px !important
+}
+
+.logo-social-network-adress{
+	text-align: center;
+}
+
+.sociais-networks img:hover{
+	background-color: #ffa200;
+}
+
+.logo-social-network-adress p{
+	font-size: 12px;
+	line-height: 18px;
+	color: #7f7f7f;
+	font-family: "Montserrat";
+}
+
+.pet-store-about-footer{
+	text-align: center;
+	color: #7f7f7f;
+	font-family: "Montserrat";
+	font-size: 14px;	
+}
+
+.subtitle-footer{
+	color: #8158c5;
+	text-transform: uppercase;
+	font-family: "Montserrat";
+	font-size: 15px;
+}
+
+.pet-store-about-footer p{
+	margin: 15px 0;
+  text-align: left;
+  transform: translate(35%, 0%);
+}
+
+.pay-visa{
+	background-color: #0057a0;
+	padding: 9px 5px;
+}
+
+.pay-mastercard{
+	background-color: #22205f;
+	padding: 4px 5px;
+}
+
+.pay-express{
+	background-color: #2e76bc;
+	padding: 7px 3px;
+}
+
+.pay-diners{
+	padding: 3px 7px;
+	border: 1px solid #e1e1e1;
+}
+
+.pay-hipercard{
+	background-color: #b3131b;
+	width: 46px;
+	padding: 5px 0;
+}
+
+.pay-aura{
+	height: 30px;
+}
+.pay-boleto{
+	padding: 2px 4px;
+	border: 1px solid #e1e1e1;
+}
+
+.pay-elo{
+	height: 30px;
+	background-color: #231f20;
+	padding: 0px 8px;
+}
+
+.copy-content{
+	text-align: center;
+	border-top: 2px solid #f0f0f0;
+	padding: 20px 0;
+}
+
+.copy-content span{
+	color: #7f7f7f;
+	font-size: 12px;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+}
+
+.copy-content span, .copy-content img{
+	margin-right: 20px;
+}
+
+.login-hover{
+	position: absolute;
+	border: 1px solid #f0f0f0;
+	z-index: 99;
+	background-color: red;
+}
+
+.shopping-cart-hover{
+	height: 100vh; /* total da altura da tela */
+  width: 100%;
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-cart-hover.active{
+	display: flex;
+}
+/* .shopping-cart-hover.ativo{
+	display: flex;
+} */
+
+.modal{
+  background: white;
+	position: absolute;
+	height: 100vh;
+	right: 0;
+	transform: translate(0, -50%);
+}
+
+.modal h2{
+	color: #7f7f7f;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+	font-size: 15px;
+	padding: 10px;
+	border-bottom: 2px solid #7f7f7f;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #7f7f7f;
+  font-family: "Montserrat";
+	cursor: pointer;
+	border: none;
+	background: none;	
+	font-size: 25px;
+	outline: 0;
+}
+
+.modal-text{
+	font-size: 13px;
+	color: #7f7f7f;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+	padding: 10px;
+	position: absolute;
+}
+
+.subtotal{
+	right: 30px;
+}
+
+.product-shopping-cart{
+	margin-top: 40px;
+  padding: 10px;
+	border-top: 1px solid #f0f0f0;
+	color: #7f7f7f;
+	font-family: "Montserrat";
+	font-size: 13px;
+}
+
+.product-description p{
+	margin: 5px
+}
+
+.product-price-delete{
+	position: absolute;
+	right: 10px;
+	display: inline-flex;
+}
+
+.product-price-delete p{
+	margin: 0px 20px;
+	font-weight: bold;
+}
+
+.product-price-delete img{
+	cursor: pointer;
 }

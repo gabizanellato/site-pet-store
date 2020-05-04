@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Pet Store </title>
-  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/grid.css">
@@ -29,9 +27,13 @@
 
             <div class="column user-login-shopping grid-1">
               <img src="./images/login.png" class="user" alt="Usuário de Login">
-              <img src="./images/carrinho.png" class="shopping-cart" alt="Carrinho de Compras">
-              <img src="./images/Ellipse 1.png" class="notification" alt="Notificação de Compras">
+              <img src="./images/carrinho.png" data-modal="open" class="shopping-cart" alt="Carrinho de Compras">
               <span class="notification-text">99</span>
+<!-- 
+              <div class="login-hover">
+                <p> Cadastre-se </p>
+                <p> Login </p>
+              </div> -->
             </div>    
         </div>
 
@@ -128,7 +130,7 @@
             <div class="item-product-image">
               <img src="./images/new-4.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="9" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -139,7 +141,7 @@
             <div class="item-product-image">
               <img src="./images/new-3.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="10" class="button"> Compra rápida </a>
               </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -152,7 +154,7 @@
             <div class="item-product-image">
               <img src="./images/new-1.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="11" class="button"> Compra rápida </a>
               </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -164,7 +166,7 @@
             <div class="item-product-image">
               <img src="./images/new-2.png" alt="Imagens das novidades">
             <div class="item-produt-image-hover">
-              <a href="" class="button"> Compra rápida </a>
+              <a href="" data-id="12" class="button"> Compra rápida </a>
             </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -188,14 +190,14 @@
   <section class="section-products">
     <div class="row container">
       <div class="section-products-content">
-        <h2 class="title"> Novidades </h2>
+        <h2 class="title"> Destaques </h2>
         
         <div class="section-products-content-items">
           <div class="column grid-3 item-product">
             <div class="item-product-image">
               <img src="./images/new-4.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="1" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -206,7 +208,7 @@
             <div class="item-product-image">
               <img src="./images/new-3.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="2" class="button"> Compra rápida </a>
               </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -219,7 +221,7 @@
             <div class="item-product-image">
               <img src="./images/new-1.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="3" class="button"> Compra rápida </a>
               </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -231,7 +233,7 @@
             <div class="item-product-image">
               <img src="./images/new-2.png" alt="Imagens das novidades">
             <div class="item-produt-image-hover">
-              <a href="" class="button"> Compra rápida </a>
+              <a href="" data-id="4" class="button"> Compra rápida </a>
             </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -245,7 +247,7 @@
             <div class="item-product-image">
               <img src="./images/new-4.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="5" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -256,7 +258,7 @@
             <div class="item-product-image">
               <img src="./images/new-3.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="6" class="button"> Compra rápida </a>
               </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -268,7 +270,7 @@
             <div class="item-product-image">
               <img src="./images/new-1.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" class="button"> Compra rápida </a>
+                <a href="" data-id="7" class="button"> Compra rápida </a>
               </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -280,7 +282,7 @@
             <div class="item-product-image">
               <img src="./images/new-2.png" alt="Imagens das novidades">
             <div class="item-produt-image-hover">
-              <a href="" class="button"> Compra rápida </a>
+              <a href="" data-id="8" class="button"> Compra rápida </a>
             </div>
             </div>
               <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -321,21 +323,128 @@
       <div class="sign-in-newsletter">
         <h2 class="title-news"> Assine nossa Newsletter </h2>
         <p class="subtitle-news"> Cadastre-se para receber nossas novidades e descontos exclusivos! </p>
+
+      <div class="newsletter-form">
+        <form id="form-newsletter" method="POST" action="#">
+          <input type="text" id="nome" name="nome" class="column grid-2" placeholder="Nome"> 
+          <input type="email" id="email" name="email" class="column grid-3" placeholder="E-mail">
+          <button id="enviar" name="enviar" class="column grid-1 button btn-form" type="submit"> Enviar </button>
+        </form>
       </div>
-    </div>
-
-
-
-
+      </div>
+    </div>  
   </section>
 
+  <footer>
+    <section class="section-footer">
+      <div class="container row">
+        <div class="footer-information">
+          <div class="column grid-3 logo-social-network-adress">
+            <img src="./images/logo.png" alt="Logo Pet Store">
+            <div class="sociais-networks">
+              <a href=""><img src="./images/facebook.svg" alt="Facebook" class="facebook"></a>
+              <a href=""><img src="./images/Forma 1.svg" alt="Instagram" class="instagram"></a>
+              <a href=""><img src="./images/Shape 3.svg" alt="Twitter" class="twitter"></a>
+            </div>  
+            <p> © 2019 • CNPJ 00.000.000/0000-00 </p>
+            <p> Rua Tal de Tal, 123 - Cidade, Estado </p>
+          </div>
+
+          <div class="column grid-3 pet-store-about-footer">
+            <h3 class="subtitle-footer"> Pet Store </h3>
+              <p> Quem somos </p>
+              <p> Como comprar </p>
+              <p> Trocas e Devoluções </p>
+              <p> Fretes e Entregas </p>
+          </div>
+
+          <div class="column grid-3 pet-store-about-footer">
+            <h3 class="subtitle-footer"> Contato </h3>
+              <p> (99) 9999-9999 </p>
+              <p> (99) 9999-9999 </p>
+              <p> petstore@petstore.com </p>
+          </div>
+
+          <div class="column grid-2 footer-pay">
+            <h3 class="subtitle-footer"> Pagamento </h3>
+            <div class="footer-pay-card">
+              <img src="./images/visa.png" alt="Visa" class="pay-visa">
+              <img src="./images/mastercard.png" alt="Mastercard" class="pay-mastercard">
+              <img src="./images/american.png" alt="American Express" class="pay-express">
+              <img src="./images/dinersclub.png" alt="Diners" class="pay-diners"> <br>
+              <img src="./images/hipercard.png" alt="Hipercard" class="pay-hipercard">
+              <img src="./images/aura.png" alt="Aura" class="pay-aura">
+              <img src="./images/elo.png" alt="Elo" class="pay-elo">
+              <img src="./images/boleto.png" alt="Boleto" class="pay-boleto">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-copy">
+      <div class="container">
+        <div class="copy-content">
+          <span> Tecnologia e Desenvolvimento </span>
+          <img src="./images/seri.e.png" alt="Logo Seri.e">
+          <img src="./images/nuvemshop.png" alt="Logo NuvemShop">
+        </div>
+      </div>
+    </section>
+
+    <section class="shopping-cart-hover">
+      <div class="container">
+        <div class="modal grid-5">
+          <div class="product-titles">
+            <h2> Seu carrinho </h2>
+            <button data-modal="close" class="close"> X </button>
+          </div>
+      
+          <span class="modal-text"> Produtos </span>
+          <span class="modal-text subtotal"> Subtotal </span>
+
+          <div class="list-products">
+            <div class="product-shopping-cart row">
+              <img src="./images/produto-carrinho.png" alt="Produto Carrinho" class="column">
+
+              <div class="product-description column">
+                <p> Lorem ipsum dolor summit </p>
+                <p> (Azul, P) </p>
+                <p> R$ 99,99 </p>
+                <input type="text" id="campo">
+                <input type="button" value="+">
+                <input type="button" value="-">
+              </div>
+
+              <div class="product-price-delete column">
+                <p> R$ 99,99 </p>
+                <img src="./images/excluir.svg" alt="Excluir Produto">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+  
+
+    </section>
+
+
+
+
+
+
+
+
+  </footer>
+
   
 
 
   
 
-  <script src="jquery.min.js"></script>
-  <script src="owlcarousel/owl.carousel.min.js"></script>
+
   <script src="./js/script.js"></script>
 
 </body>
