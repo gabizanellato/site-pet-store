@@ -1,18 +1,23 @@
-/* Header */
- 
-/* Search */
+/* ----- HEADER ---- */
+header{
+	position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
+
 .header-section{
 	background: #fff;
 	width: 100%;
 }
-
+ 
+/* caixa de busca */
 .header-search{
 	border: 1px solid #cccccc;
 	display: inline-flex;
 	height: 45px;
 	padding: 8px;
 	width: 198px;
-	margin-top: 14px;
+	margin-top: 28px;;
 }
 
 .search-text{
@@ -27,19 +32,69 @@
 	cursor: pointer;
 }	
 
-/* Logo */
+/* logo */
 .logo-pet-store{
 	margin-left: 0 !important;
 	text-align: center;
+	margin: 14px;
 }
 
-/* Login & cart icon */
+/* login e carrinho de compras */
 .user-login-shopping{
 	margin-left: 0 !important;
 	margin-top: 15px;
 	text-align: center;
+	margin-top: 35px;
 }
 
+.user{
+	cursor: pointer;
+}
+
+/* hover do usuário */
+.login-hover{
+	position: absolute;
+	border: 1px solid #f0f0f0;
+	color: #7f7f7f;
+  z-index: 99;
+  background-color: #ffffff;
+  font-family: "Montserrat";
+	font-size: 12px;
+	padding: 5px;
+	width: 100px;
+	right: 50%;
+	top: 33px;
+	display: none;
+}
+
+.login-hover li{
+	margin: 12px 0;
+}
+
+.login-hover li a{
+	cursor: pointer;
+}
+
+.user-login-shopping:hover .login-hover{
+	display: block;
+	animation: show-subcategory .2s forwards;
+}
+
+.login-hover::before{
+	content: "";
+	position: absolute;
+	top: -6px;
+	width: 0px;
+	height: 0px;
+	right: 11px;
+	border-bottom: 6px solid #f0f0f0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	background-color: #fff;
+
+}
+
+/* carrinho de compras */
 .shopping-cart{
 	position: relative;
 	cursor: pointer;
@@ -58,7 +113,8 @@
 	height: 13px;
 }
 
-/* Menu */
+
+/* ---- MENU ---- */
 .header-menu-section{
 	background:  #8158c5;
 	height: 50px;
@@ -69,6 +125,7 @@
 	margin-top: 15px;
 }
 
+/* menu principal */
 .menu-category{
 	position: relative;
 }
@@ -86,24 +143,18 @@
 	color: #8158c5;	
 }
 
+/* menu subcatergoria */
 .menu-subcategory{
 	position: absolute;
 	border: 1px solid #f0f0f0;
 	z-index: 99;
-	top: 34px;
+	top: 27px;
 	background-color: #ffffff;
 	width: 200px;
 }
 
-.menu-mobile{
-	display: none;
-	position: absolute;
-	right: 25px;
-	top: 12px;
-}
-
 .menu-subcategory li{
-	padding: 8px 0;
+	padding: 4px 0;
 }
 
 .menu-subcategory li a{
@@ -121,6 +172,11 @@
 	height: 100%;
 }
 
+.sub{
+	left: 198px;
+	top: 55px;
+}
+
 .menu-category .menu-subcategory{
 	display: none;
 }
@@ -130,6 +186,7 @@
 	animation: show-subcategory .2s forwards;
 } 
 
+/* animação */
 @keyframes show-subcategory{
 	from{
 		opacity: 0;
@@ -141,6 +198,15 @@
 	}
 } 
 
+/* Menu responsivo */
+.menu-mobile{
+	display: none;
+	position: absolute;
+	right: 25px;
+	top: 12px;
+}
+
+/* ---- SEÇÃO BANNER ---- */
 .banner{
 	margin: -5px;
 }
@@ -150,13 +216,26 @@
 	position: relative;
 }
 
+.seta-banner-left{
+	position: absolute;
+}
 
+.seta-banner-right{
+	position: absolute;
+}
+
+/* ---- SEÇÃO ITENS ANIMAIS ---- */
 .section-items{
 	background-color: #ffa200;
 	padding: 10px 0px;
 }
 
+/* ---- SEÇÃO DOS ICONES ANIMAIS ----*/
+.animals-categories{
+	margin-top: 30px;
+}
 
+/* ---- SEÇÃO DOS PRODUTOS ---- */
 .section-products-content{
 	padding: 30px 0;
 	overflow: hidden;
@@ -171,10 +250,6 @@
 	font-weight: bold;
 }
 
-.item-product{
-	margin-bottom: 40px;
-}
-
 .section-products-content-items{
 	overflow: hidden;
 	margin-top: 28px;
@@ -184,6 +259,44 @@
 	font-family: "Montserrat";
 }
 
+.item-product{
+	margin-bottom: 40px;
+}
+
+.item-product-image{
+	position: relative;
+}
+
+/* imagem do produto e hover */
+.item-produt-image-hover{
+	display: none;
+	background-color:rgba(129, 88, 197, 0.4);
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+	width: 100%;
+	padding: 130px 0;
+	font-weight: bold;
+}
+
+.button{
+	font-size: 12px;
+	color: #ffffff;
+	font-family: "Montserrat";
+	text-align: center;	
+	text-transform: uppercase;
+	padding: 12px 10px;
+	background-color: #ffa200;
+	font-weight: bold;
+}
+
+.item-product-image:hover .item-produt-image-hover{
+	display: block;
+}
+
+/* dados do produto */
 .item-product-name{
 	margin: 10px 0;
 }
@@ -209,53 +322,24 @@
 	text-transform: uppercase;
 }
 
-.item-product-image{
-	position: relative;
-}
-
-.item-product-image:hover .item-produt-image-hover{
-	display: block;
-}
-
-.item-produt-image-hover{
-	display: none;
-	background-color:rgba(129, 88, 197, 0.4);
-  height: 100%;
-  margin: 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-	width: 100%;
-	padding: 130px 0;
-	font-weight: bold;
-}
-
-.button{
-	font-size: 12px;
-	color: #ffffff;
-	font-family: "Montserrat";
-	text-align: center;	
-	text-transform: uppercase;
-	padding: 12px 10px;
-	background-color: #ffa200;
-	font-weight: bold;
-}
-
 .first{
 	margin-left: 0 !important;
 }
 
+/* botão ver mais */
 .button-see-products{
 	text-align: center;
 	margin: 15px 0;
 }
 
+/* ---- SECTION NEWSLETTER ---- */
 .section-newsletter{
 	background-color: #8158c5;
 	width: 100%;
 	padding: 10px 0;
 }
 
+/* lista de vantagens */
 .benefits-list{
 	overflow: hidden;
 	border-bottom: 2px solid #ffa200;
@@ -277,6 +361,7 @@
 	align-items: center;
 }
 
+/* formulario */
 .title-news{
 	font-size: 24px;
 	color: #ffffff;
@@ -288,6 +373,7 @@
 .sign-in-newsletter{
 	padding: 50px 0 0;
 	text-align: center;
+	position: relative;
 }
 
 .subtitle-news{
@@ -299,7 +385,6 @@
 
 .newsletter-form, #form-newsletter{
 	overflow: hidden;
-	
 }
 
 #form-newsletter{
@@ -329,7 +414,24 @@
 	border: none;
 }
 
+/* botões copy */
+.buttons-copy{
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
 
+.whatsapp{
+	transform: translate(60px, -20px);
+	height: 45px;
+}
+
+.arrow-copy{
+	transform: translate(110px, -80px);
+	height: 45px;
+}
+
+/* ---- FOOTER ---- */
 .section-footer{
 	padding: 40px 0;
 }
@@ -338,10 +440,13 @@
 	overflow: hidden;
 }
 
+/* redes sociais */
+.logo-social-network-adress{
+	text-align: center;
+}
 .sociais-networks{
 	margin: 20px 0 10px;
 }
-
 
 .sociais-networks img{
 	padding: 3px 8px;
@@ -358,14 +463,11 @@
 	padding: 4px 5px !important
 }
 
-.logo-social-network-adress{
-	text-align: center;
-}
-
 .sociais-networks img:hover{
 	background-color: #ffa200;
 }
 
+/* endereço */
 .logo-social-network-adress p{
 	font-size: 12px;
 	line-height: 18px;
@@ -373,6 +475,7 @@
 	font-family: "Montserrat";
 }
 
+/* sobre a empresa */
 .pet-store-about-footer{
 	text-align: center;
 	color: #7f7f7f;
@@ -393,6 +496,7 @@
   transform: translate(35%, 0%);
 }
 
+/* pagamentos */
 .pay-visa{
 	background-color: #0057a0;
 	padding: 9px 5px;
@@ -433,6 +537,7 @@
 	padding: 0px 8px;
 }
 
+/* ---- COPYRIGHT ----  */
 .copy-content{
 	text-align: center;
 	border-top: 2px solid #f0f0f0;
@@ -455,230 +560,6 @@
 	margin-right: 20px;
 }
 
-.user{
-	cursor: pointer;
-}
-
-.login-hover{
-	position: absolute;
-	border: 1px solid #f0f0f0;
-	color: #7f7f7f;
-  z-index: 99;
-  background-color: #ffffff;
-  font-family: "Montserrat";
-	font-size: 12px;
-	padding: 5px;
-	width: 100px;
-	right: 50%;
-	top: 33px;
-	display: none;
-}
-
-.login-hover li{
-	margin: 12px 0;
-}
-
-.login-hover li a{
-	cursor: pointer;
-}
-
-.user-login-shopping:hover .login-hover{
-	display: block;
-}
-
-.login-hover::before{
-	content: "";
-	position: absolute;
-	top: -6px;
-	width: 0px;
-	height: 0px;
-	right: 11px;
-	border-bottom: 6px solid #f0f0f0;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	background-color: #fff;
-
-}
-
-.shopping-cart-hover{
-	height: 100vh; /* total da altura da tela */
-  width: 100%;
-  background: rgba(0,0,0,.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2000;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.shopping-cart-hover.active{
-	display: flex;
-}
-
-.modal{
-  background: white;
-	position: absolute;
-	height: 100vh;
-	right: 0;
-	transform: translate(0, -50%);
-	overflow: auto;
-}
-
-
-.modal h2{
-	color: #7f7f7f;
-	font-family: "Montserrat";
-	text-transform: uppercase;
-	font-size: 15px;
-	padding: 10px;
-	
-}
-
-.product-titles{
-	border-bottom: 2px solid #7f7f7f;
-}
-
-.products-subtitles{
-	padding: 10px 0;
-}
-
-.close {
-  position: absolute;
-  color: #7f7f7f;
-  font-family: "Montserrat";
-	cursor: pointer;
-	border: none;
-	background: none;	
-	font-size: 25px;
-	outline: 0;
-	right: 0;
-
-}
-
-.modal-text{
-	font-size: 13px;
-	color: #7f7f7f;
-	font-family: "Montserrat";
-	text-transform: uppercase;
-	padding: 10px;
-	/* position: absolute; */
-}
-
-.subtotal{
-	right: 30px;
-	transform: translate(0px, -10px);
-	position: absolute;
-}
-
-.product-shopping-cart{
-	margin-top: 10px;
-  padding: 10px;
-	border-top: 1px solid #f0f0f0;
-	color: #7f7f7f;
-	font-family: "Montserrat";
-	font-size: 13px;
-}
-
-.product-description p{
-	margin: 5px
-}
-
-.product-price-delete{
-	position: absolute;
-	right: 10px;
-	display: inline-flex;
-}
-
-.product-price-delete p{
-	margin: 0px 20px;
-	font-weight: bold;
-}
-
-.product-price-delete img{
-	cursor: pointer;
-}
-
-.product-description .add,
-.product-description .sub,
-.product-description #campo{
-	border: none;
-}
-
-.product-description #campo{
-	width: 20px;
-	border: 1px solid #e4e4e4;
-	text-align: center;
-	font-family: "Montserrat";
-}
-
-.product-shopping-cart-html{
-	display: none;
-}
-
-.products-total{
-	border-top: 1px solid #f0f0f0;
-	padding: 15px 0;
-	font-weight: bold;
-}
-
-.products-cep{
-	padding: 18px 10px;
-	font-family: "Montserrat";
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #7f7f7f;
-	border-top: 1px solid #e4e4e4;
-}
-
-.products-cep input{
-	outline: 0;
-	font-family: "Montserrat";
-	font-size: 12px;
-	margin: 0 10px 0;
-	padding: 5px;
-	width: 195px;
-}
-
-.products-cep button{
-	border: 1px solid #000;
-	background: none;
-	text-transform: uppercase;
-	font-family: "Montserrat";
-	padding: 6px;
-	color: #7f7f7f;
-	font-size: 12px;
-	cursor: pointer;
-}
-
-.total-finish span{
-	font-size: 16px;
-}
-
-.products-finish{
-	padding: 18px 10px;
-	border-top: 1px solid #e4e4e4
-}
-
-.products-finish .back{
-	font-family: "Montserrat";
-	font-size: 13px;
-	text-decoration: underline;
-	cursor: pointer;
-	color: #7f7f7f;
-	margin: 0px 20px 0px 5px;
-}	
-
-.products-finish button{
-	border: none;
-	padding: 14px 50px;
-}
-
-.animals-categories{
-	margin-top: 30px;
-}
-
 .serie{
 	height: 23px;
 }
@@ -686,3 +567,4 @@
 .nuvemshop{
 	height: 20px
 }
+

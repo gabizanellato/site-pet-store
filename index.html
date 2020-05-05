@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Pet Store </title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/carousel.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/grid.css">
+  <link rel="stylesheet" href="/styles/carousel.css">
+  <link rel="stylesheet" href="/styles/responsive.css">
+  <link rel="stylesheet" href="/styles/modal.css">
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
@@ -21,23 +22,21 @@
         <div class="header-content">
           <div class="column header-search grid-2">
             <input type="text" class="search-text" placeholder="Pesquisar...">
-            <img src="./images/lupa.png" alt="Icone de Busca">
+            <img src="./images/header-menu/lupa.png" alt="Icone de Busca">
           </div>
 
           <div class="column logo-pet-store grid-9">
-            <img src="./images/logo.png">
+            <img src="./images/header-menu/logo.png" alt="Logo PetStore">
           </div>
 
           <div class="column user-login-shopping grid-1">
-            <img src="./images/login.png" class="user" alt="Usuário de Login">
+            <img src="./images/header-menu/login.png" class="user" alt="Usuário de Login">
             <ul class="login-hover">
               <li><a> Cadastre-se </a></li>
               <li><a> Login </a></li>
             </ul>
-            <img src="./images/carrinho.png" data-modal="open" class="shopping-cart" alt="Carrinho de Compras">
+            <img src="./images/header-menu/carrinho.png" data-modal="open" class="shopping-cart" alt="Carrinho de Compras">
             <span class="notification-text"> 0 </span>
-
-
           </div>
         </div>
 
@@ -54,40 +53,48 @@
             </li>
 
             <li class="menu-category">
-              <a href="" class="category-link"> Categoria </a>
+              <a href="#" class="category-link"> Categoria </a>
 
               <ul class="menu-subcategory">
-                <li><a href=""> Subcategoria lorem </a></li>
-                <li><a href=""> Subcategoria </a></li>
-                <li><a href=""> Subcategoria lorem ipsum </a></li>
-                <li><a href=""> Subcategoria lorem </a></li>
-                <li><a href=""> Subcategoria </a></li>
+                <li><a href="#"> Subcategoria lorem </a></li>
+                <li><a href="#"> Subcategoria </a></li>
+                <li><a href="#" class="menu-category-sub"> Subcategoria lorem ipsum </a>
+                  <ul class="menu-subcategory sub">
+                    <li><a href="#"> Subcategoria lorem </a></li>
+                    <li><a href="#"> Subcategoria </a></li>
+                    <li><a href="#"> Subcategoria lorem ipsum </a></li>
+                    <li><a href="#"> Subcategoria lorem </a></li>
+                    <li><a href="#"> Subcategoria </a></li>
+                  </ul>
+                </li> 
+                <li><a href="#"> Subcategoria lorem </a></li>
+                <li><a href="#"> Subcategoria </a></li>
               </ul>
             </li>
 
             <li class="menu-category">
-              <a href="" class="category-link"> Categoria lorem ipsum </a>
+              <a href="#" class="category-link"> Categoria lorem ipsum </a>
             </li>
 
             <li class="menu-category">
-              <a href="" class="category-link"> Categoria lorem </a>
+              <a href="#" class="category-link"> Categoria lorem </a>
             </li>
 
             <li class="menu-category">
-              <a href="" class="category-link"> Categoria </a>
+              <a href="#" class="category-link"> Categoria </a>
             </li>
 
             <li class="menu-category">
-              <a href="" class="category-link"> Categoria lorem ipsum </a>
+              <a href="#" class="category-link"> Categoria lorem ipsum </a>
             </li>
 
             <li class="menu-category">
-              <a href="" class="category-link"> Categoria ipsum </a>
+              <a href="#" class="category-link"> Categoria ipsum </a>
             </li>
           </ul>
 
             <div>
-              <img src="./images/ver mais.png" alt="Botão Ver mais" class="menu-mobile">
+              <img src="./images/header-menu/menu-mobile.png" alt="Botão Ver mais" class="menu-mobile">
             </div>
         
         </nav>
@@ -96,25 +103,18 @@
   </header>
 
   <section class="banner">
-    <div class="slideshow-container"></div>
-    <!-- <div class="mySlides fade"> -->
-      <img src="./images/banner.png" class="banner-background" alt="Imagem de animais">
-      <!-- <img src="./images/banner.png" class="banner-background" alt="Imagem de animais"> -->
-
-
-      <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-
+    <div class="background-banner">
+      <img src="./images/banner/banner.png" class="banner-background" alt="Imagem de animais">
     </div>
-
-
+    <img src="svg/seta1.svg" alt="Seta carrossel" class="seta-banner-left">
+    <img src="svg/seta2.svg" alt="Seta carrossel" class="seta-banner-right">
   </section>
 
   <section class="section-items">
     <div class="row container">
-      <img src="./images/racoes.png" class="img-item-racao grid-4 column">
-      <img src="./images/brinquedos.png" class="img-item-brinquedos grid-4 column">
-      <img src="./images/acessorios.png" class="img-item-acessorios grid-4 column">
+      <img src="./images/items-animals/racoes.png" class="img-item-racao grid-4 column" alt="Icone Rações">
+      <img src="./images/items-animals/brinquedos.png" class="img-item-brinquedos grid-4 column" alt="Icone Brinquedos">
+      <img src="./images/items-animals/acessorios.png" class="img-item-acessorios grid-4 column" alt="Icone Acessorios">
     </div>
   </section>
 
@@ -130,9 +130,9 @@
             <div class="mySlides fade">
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-4.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-4.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="9" class="button"> Compra rápida </a>
+                    <a href="#" data-id="9" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -141,9 +141,9 @@
       
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-3.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-3.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="10" class="button"> Compra rápida </a>
+                    <a href="#" data-id="10" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -154,9 +154,9 @@
 
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-1.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-1.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="11" class="button"> Compra rápida </a>
+                    <a href="#" data-id="11" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -166,9 +166,9 @@
 
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-2.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-2.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="12" class="button"> Compra rápida </a>
+                    <a href="#" data-id="12" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -182,9 +182,9 @@
             <div class="mySlides fade">
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-3.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-3.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="10" class="button"> Compra rápida </a>
+                    <a href="#" data-id="10" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -194,9 +194,9 @@
 
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-4.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-4.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="9" class="button"> Compra rápida </a>
+                    <a href="#" data-id="9" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -206,9 +206,9 @@
 
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-2.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-2.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="12" class="button"> Compra rápida </a>
+                    <a href="#" data-id="12" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -219,9 +219,9 @@
               
               <div class="column grid-3 item-product">
                 <div class="item-product-image">
-                  <img src="./images/new-1.png" alt="Imagens das novidades">
+                  <img src="./images/products/new-1.png" alt="Imagens das novidades">
                   <div class="item-produt-image-hover">
-                    <a href="" data-id="11" class="button"> Compra rápida </a>
+                    <a href="#" data-id="11" class="button"> Compra rápida </a>
                   </div>
                 </div>
                 <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -249,8 +249,8 @@
 
   <section class="animals-categories">
     <div class="row container">
-      <img src="./images/gatos.png" class="column grid-6">
-      <img src="./images/cachorros.png" class="column grid-6">
+      <img src="./images/animals-categories/gatos.png" class="column grid-6" alt="Categoria Gatos">
+      <img src="./images/animals-categories/cachorros.png" class="column grid-6" alt="Categorias Cachorros">
     </div>
   </section>
 
@@ -262,9 +262,9 @@
         <div class="section-products-content-items">
           <div class="column grid-3 item-product">
             <div class="item-product-image">
-              <img src="./images/new-4.png" alt="Imagens das novidades">
+              <img src="./images/products/new-4.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="1" class="button"> Compra rápida </a>
+                <a href="#" data-id="1" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -273,9 +273,9 @@
 
           <div class="column grid-3 item-product">
             <div class="item-product-image">
-              <img src="./images/new-3.png" alt="Imagens das novidades">
+              <img src="./images/products/new-3.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="2" class="button"> Compra rápida </a>
+                <a href="#" data-id="2" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -286,9 +286,9 @@
 
           <div class="column grid-3 item-product">
             <div class="item-product-image">
-              <img src="./images/new-1.png" alt="Imagens das novidades">
+              <img src="./images/products/new-1.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="3" class="button"> Compra rápida </a>
+                <a href="#" data-id="3" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -298,9 +298,9 @@
 
           <div class="column grid-3 item-product">
             <div class="item-product-image">
-              <img src="./images/new-2.png" alt="Imagens das novidades">
+              <img src="./images/products/new-2.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="4" class="button"> Compra rápida </a>
+                <a href="#" data-id="4" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -312,9 +312,9 @@
 
           <div class="column grid-3 item-product first">
             <div class="item-product-image">
-              <img src="./images/new-4.png" alt="Imagens das novidades">
+              <img src="./images/products/new-4.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="5" class="button"> Compra rápida </a>
+                <a href="#" data-id="5" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -323,9 +323,9 @@
 
           <div class="column grid-3 item-product">
             <div class="item-product-image">
-              <img src="./images/new-3.png" alt="Imagens das novidades">
+              <img src="./images/products/new-3.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="6" class="button"> Compra rápida </a>
+                <a href="#" data-id="6" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -335,9 +335,9 @@
 
           <div class="column grid-3 item-product">
             <div class="item-product-image ">
-              <img src="./images/new-1.png" alt="Imagens das novidades">
+              <img src="./images/products/new-1.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="7" class="button"> Compra rápida </a>
+                <a href="#" data-id="7" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -347,9 +347,9 @@
 
           <div class="column grid-3 item-product">
             <div class="item-product-image">
-              <img src="./images/new-2.png" alt="Imagens das novidades">
+              <img src="./images/products/new-2.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
-                <a href="" data-id="8" class="button"> Compra rápida </a>
+                <a href="#" data-id="8" class="button"> Compra rápida </a>
               </div>
             </div>
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
@@ -360,7 +360,7 @@
         </div>
 
         <div class="grid-12 button-see-products">
-          <a href="" class="button"> Ver todos os produtos </a>
+          <a href="#" class="button"> Ver todos os produtos </a>
         </div>
 
       </div>
@@ -377,12 +377,12 @@
         </div>
 
         <div class="column grid-3 benefits-list-text">
-          <img src="./images/icone-logo.png">
+          <img src="./images/icone-logo.png" alt="Icone do logo">
           <span> <b> Parcelamento </b> sem juros </span>
         </div>
 
         <div class="column grid-4 benefits-list-text">
-          <img src="./images/icone-logo.png">
+          <img src="./images/icone-logo.png" alt="Icone do logo">
           <span> <b> Cadastre-se </b> e ganhe desconto </span>
         </div>
       </div>
@@ -398,7 +398,72 @@
             <button id="enviar" name="enviar" class="column grid-1 button btn-form" type="submit"> Enviar </button>
           </form>
         </div>
+
+        <div class="buttons-copy">
+          <img src="./images/seta copy 2.png" alt="Seta" class="arrow-copy">
+          <img src="./images/botao-fixo-whats-padrao.png" alt="Botão Whatsapp" class="whatsapp">
         </div>
+        
+      </div>
+    </div>
+  </section>
+
+<!-- Seção do carrinho de compras | MODAL -->
+  <section class="shopping-cart-hover">
+    <div class="container">
+      <div class="modal grid-5">
+        <div class="product-titles row">
+          <h2 class="column"> Seu carrinho </h2>
+          <button data-modal="close" class="close column"> X </button>
+        </div>
+
+        <div class="products-subtitles">
+          <span class="modal-text"> Produtos </span>
+          <span class="modal-text subtotal"> Subtotal </span>
+        </div>
+
+        <div class="list-products">
+          <div class="product-shopping-cart-html row">
+            <img src="./images/produto-carrinho.png" alt="Produto Carrinho" class="column">
+
+            <div class="product-description column">
+              <p> Lorem ipsum dolor summit </p>
+              <p> (Azul, P) </p>
+              <p> R$ 99,99 </p>
+              <input type="button" value="-">
+              <input type="text" id="campo">
+              <input type="button" value="+">
+            </div>
+
+            <div class="product-price-delete column">
+              <p> R$ 99,99 </p>
+              <img src="/svg/excluir.svg" alt="Excluir Produto">
+            </div>
+          </div>
+        </div>
+
+        <div class="products-total">
+          <span class="modal-text"> Subtotal </span>
+          <span class="modal-text subtotal" data-modal="preco"> R$ 0 </span>
+        </div>
+
+        <div class="products-cep">
+          <span> Digite seu CEP: </span>
+          <input type="text" placeholder="00000-000">
+          <button> Calcule o frete </button>
+        </div>
+
+        <div class="products-total total">
+          <span class="modal-text"> Total </span>
+          <span class="modal-text subtotal" data-modal="final"> R$ 0 </span>
+        </div>
+
+        <div class="products-finish">
+          <span> < </span>
+            <span class="back"> Continuar comprando </span>
+            <button type="submit" class="button"> Finalizar compra </button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -407,11 +472,11 @@
       <div class="container row">
         <div class="footer-information">
           <div class="column grid-3 logo-social-network-adress">
-            <img src="./images/logo.png" alt="Logo Pet Store">
+            <img src="./images/header-menu/logo.png" alt="Logo Pet Store">
             <div class="sociais-networks">
-              <a href=""><img src="./images/facebook.svg" alt="Facebook" class="facebook"></a>
-              <a href=""><img src="./images/Forma 1.svg" alt="Instagram" class="instagram"></a>
-              <a href=""><img src="./images/Shape 3.svg" alt="Twitter" class="twitter"></a>
+              <a href="#"><img src="./svg/facebook.svg" alt="Facebook" class="facebook"></a>
+              <a href="#"><img src="./svg/instagram.svg" alt="Instagram" class="instagram"></a>
+              <a href="#"><img src="./svg/twitter.svg" alt="Twitter" class="twitter"></a>
             </div>
             <p> © 2019 • CNPJ 00.000.000/0000-00 </p>
             <p> Rua Tal de Tal, 123 - Cidade, Estado </p>
@@ -435,14 +500,14 @@
           <div class="column grid-2 footer-pay">
             <h3 class="subtitle-footer"> Pagamento </h3>
             <div class="footer-pay-card">
-              <img src="./images/visa.png" alt="Visa" class="pay-visa">
-              <img src="./images/mastercard.png" alt="Mastercard" class="pay-mastercard">
-              <img src="./images/american.png" alt="American Express" class="pay-express">
-              <img src="./images/dinersclub.png" alt="Diners" class="pay-diners"> <br>
-              <img src="./images/hipercard.png" alt="Hipercard" class="pay-hipercard">
-              <img src="./images/aura.png" alt="Aura" class="pay-aura">
-              <img src="./images/elo.png" alt="Elo" class="pay-elo">
-              <img src="./images/boleto.png" alt="Boleto" class="pay-boleto">
+              <img src="./images/footer/visa.png" alt="Visa" class="pay-visa">
+              <img src="./images/footer/mastercard.png" alt="Mastercard" class="pay-mastercard">
+              <img src="./images/footer/american.png" alt="American Express" class="pay-express">
+              <img src="./images/footer/dinersclub.png" alt="Diners" class="pay-diners"> <br>
+              <img src="./images/footer/hipercard.png" alt="Hipercard" class="pay-hipercard">
+              <img src="./images/footer/aura.png" alt="Aura" class="pay-aura">
+              <img src="./images/footer/elo.png" alt="Elo" class="pay-elo">
+              <img src="./images/footer/boleto.png" alt="Boleto" class="pay-boleto">
             </div>
           </div>
         </div>
@@ -453,95 +518,15 @@
       <div class="container">
         <div class="copy-content">
           <span> Tecnologia e Desenvolvimento </span>
-          <img src="./images/seri.e.png" alt="Logo Seri.e" class="serie">
-          <img src="./images/nuvemshop.png" alt="Logo NuvemShop" class="nuvemshop">
+          <img src="./images/copy/seri.e.png" alt="Logo Seri.e" class="serie">
+          <img src="./images/copy/nuvemshop.png" alt="Logo NuvemShop" class="nuvemshop">
         </div>
       </div>
     </section>
-
-    <section class="shopping-cart-hover">
-      <div class="container">
-        <div class="modal grid-5">
-          <div class="product-titles row">
-            <h2 class="column"> Seu carrinho </h2>
-            <button data-modal="close" class="close column"> X </button>
-          </div>
-
-          <div class="products-subtitles">
-            <span class="modal-text"> Produtos </span>
-            <span class="modal-text subtotal"> Subtotal </span>
-          </div>
-
-          <div class="list-products">
-            <div class="product-shopping-cart-html row">
-              <img src="./images/produto-carrinho.png" alt="Produto Carrinho" class="column">
-
-              <div class="product-description column">
-                <p> Lorem ipsum dolor summit </p>
-                <p> (Azul, P) </p>
-                <p> R$ 99,99 </p>
-                <input type="button" value="-">
-                <input type="text" id="campo">
-                <input type="button" value="+">
-              </div>
-
-              <div class="product-price-delete column">
-                <p> R$ 99,99 </p>
-                <img src="./images/excluir.svg" alt="Excluir Produto">
-              </div>
-            </div>
-          </div>
-
-          <div class="products-total">
-            <span class="modal-text"> Subtotal </span>
-            <span class="modal-text subtotal" data-modal="preco"> R$ 0 </span>
-          </div>
-
-          <div class="products-cep">
-            <span> Digite seu CEP: </span>
-            <input type="text" placeholder="00000-000">
-            <button> Calcule o frete </button>
-          </div>
-
-          <div class="products-total total">
-            <span class="modal-text"> Total </span>
-            <span class="modal-text subtotal" data-modal="final"> R$ 0 </span>
-          </div>
-
-          <div class="products-finish">
-            <span>
-              < </span>
-                <span class="back"> Continuar comprando </span>
-                <button type="submit" class="button"> Finalizar compra </button>
-          </div>
-
-        </div>
-      </div>
-
-
-
-
-    </section>
-
-
-
-
-
-
-
-
   </footer>
 
-
-
-
-
-
-
-  <script src="./js/carousel.js"></script>
-  <script src="./js/script.js"></script>
-
+  <script src="./scripts/carousel.js"></script>
+  <script src="./scripts/script.js"></script>
 
 </body>
-
 </html>

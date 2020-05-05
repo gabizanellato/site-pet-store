@@ -1,3 +1,4 @@
+/* ---- RESPONSIVO ---- */
 @media (max-width: 1170px) {
   .grid-1,
   .grid-2,
@@ -19,27 +20,28 @@
     margin-left: 0;
   }
 
-  .pet-store-about-footer{
-    margin-top: 20px;
+  /* ---- HEADER ---- */
+  .header-content{
+    z-index: 1;
+	  position: relative;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
   }
 
-  .pet-store-about-footer p {
-    text-align: center !important;
-    transform: none !important;
+  .header-search{
+    margin: 24px 0;
   }
 
-  .footer-pay{
-    text-align: center;
+  .notification-text{
+    right: -5px !important;
   }
 
-  .animals-categories{
-    text-align: center;
+  .user-login-shopping{
+    margin-top: 0 !important;
   }
 
-  .section-items{
-    text-align: center;
-  }
-
+  /* ---- MENU ----- */
   .menu{
     position: relative;
   }
@@ -66,7 +68,7 @@
 	  height: 100%;
  }
 
- .menu-subcategory{
+  .menu-subcategory{
    position: static !important;
    border: none;
    margin-top: 10px;
@@ -81,21 +83,27 @@
   }
   
   .menu-items.ativo{
-     display: block !important;
+    display: block !important;
   }
 
   .menu-category{
     margin: 15px 0;
   }
 
+  /* --- SECTION ITENS ANIMAIS ---- */
+  .animals-categories{
+    text-align: center;
+  }
+
   .animals-categories img{
     width: 85%;
   }
 
-  .notification-text{
-    right: auto;
+  .section-items{
+    text-align: center;
   }
 
+  /* ---- NEWSLETTER ---- */
   .newsletter-form, #form-newsletter{
     position: relative;
   }
@@ -106,33 +114,31 @@
     left: 35%;
   }
 
-
-  .header-content{
-    z-index: 1;
-	  position: relative;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
+  /* ---- FOOTER ----- */
+  .pet-store-about-footer{
+    margin-top: 20px;
   }
 
-  .header-search{
-    margin: 24px 0;
+  .pet-store-about-footer p {
+    text-align: center !important;
+    transform: none !important;
   }
 
-  .notification-text{
-    right: -5px !important;
+  .footer-pay{
+    text-align: center;
   }
-
-  .user-login-shopping{
-    margin-top: 0 !important;
-  }
-
 }
 
+  
 @media (max-width: 430px) {
   .section-items img{
     width: 80%;
   }
 }
 
+@media (max-width: 1330px){
+  .buttons-copy{
+    display: none;
+  }
+}
 
