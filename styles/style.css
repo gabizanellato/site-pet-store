@@ -1,9 +1,4 @@
 /* ----- HEADER ---- */
-header{
-	position: fixed;
-  z-index: 9999;
-  width: 100%;
-}
 
 .header-section{
 	background: #fff;
@@ -202,13 +197,13 @@ header{
 .menu-mobile{
 	display: none;
 	position: absolute;
-	right: 25px;
+	right: 45px;
 	top: 12px;
 }
 
 /* ---- SEÇÃO BANNER ---- */
 .banner{
-	margin: -5px;
+	margin-bottom: -5px;
 }
 
 .banner-background{
@@ -290,6 +285,10 @@ header{
 	padding: 12px 10px;
 	background-color: #ffa200;
 	font-weight: bold;
+}
+
+.button-response{
+	display: none;
 }
 
 .item-product-image:hover .item-produt-image-hover{
@@ -383,13 +382,19 @@ header{
 	margin: 20px 0 0;
 }
 
-.newsletter-form, #form-newsletter{
-	overflow: hidden;
+.newsletter-form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
 }
 
 #form-newsletter{
 	margin: 80px 0 50px;
-	transform: translate(25%, 0%);
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 #form-newsletter input{

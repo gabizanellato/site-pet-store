@@ -18,3 +18,7 @@ a {
 ol, ul {
 	list-style: none;
 }
+
+body{
+	overflow-x: hidden;
+}
