@@ -1,0 +1,138 @@
+@media (max-width: 1170px) {
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11,
+  .grid-12 {
+    float: none;
+    width: auto;
+  }
+
+  .column + .column {
+    margin-left: 0;
+  }
+
+  .pet-store-about-footer{
+    margin-top: 20px;
+  }
+
+  .pet-store-about-footer p {
+    text-align: center !important;
+    transform: none !important;
+  }
+
+  .footer-pay{
+    text-align: center;
+  }
+
+  .animals-categories{
+    text-align: center;
+  }
+
+  .section-items{
+    text-align: center;
+  }
+
+  .menu{
+    position: relative;
+  }
+
+  .menu-items{
+    display: none !important;
+    position: absolute;
+    width: 205px;
+    padding: 40px 0 20px 0;
+    z-index: 99;
+    right: 40px;
+    background-color: #ffffff;
+    top: -10px;
+  }
+
+  .category-link{
+    color: #7f7f7f !important
+  }
+
+  .category-link:hover {
+    padding: 8px 20px;
+    display: block;
+	  width: 100%;
+	  height: 100%;
+ }
+
+ .menu-subcategory{
+   position: static !important;
+   border: none;
+   margin-top: 10px;
+   border: 1px solid #ffa200;
+ }
+
+  .menu-mobile{
+    display: block !important;
+    position: relative;
+    z-index: 99;
+    right: 25px;
+  }
+  
+  .menu-items.ativo{
+     display: block !important;
+  }
+
+  .menu-category{
+    margin: 15px 0;
+  }
+
+  .animals-categories img{
+    width: 85%;
+  }
+
+  .notification-text{
+    right: auto;
+  }
+
+  .newsletter-form, #form-newsletter{
+    position: relative;
+  }
+
+  #form-newsletter{
+    width: 210px;
+    text-align: center;
+    left: 35%;
+  }
+
+
+  .header-content{
+    z-index: 1;
+	  position: relative;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+  }
+
+  .header-search{
+    margin: 24px 0;
+  }
+
+  .notification-text{
+    right: -5px !important;
+  }
+
+  .user-login-shopping{
+    margin-top: 0 !important;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .section-items img{
+    width: 80%;
+  }
+}
+
+

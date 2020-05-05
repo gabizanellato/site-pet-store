@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,28 +19,29 @@
       <div class="row container">
 
         <div class="header-content">
-            <div class="column header-search grid-2">
-              <input type="text" class="search-text" placeholder="Pesquisar...">
-                <img src="./images/lupa.png" alt="Icone de Busca">
-            </div>
+          <div class="column header-search grid-2">
+            <input type="text" class="search-text" placeholder="Pesquisar...">
+            <img src="./images/lupa.png" alt="Icone de Busca">
+          </div>
 
-            <div class="column logo-pet-store grid-9">
-              <img src="./images/logo.png">
-            </div>
+          <div class="column logo-pet-store grid-9">
+            <img src="./images/logo.png">
+          </div>
 
-            <div class="column user-login-shopping grid-1">
-              <img src="./images/login.png" class="user" alt="Usuário de Login">
-              <img src="./images/carrinho.png" data-modal="open" class="shopping-cart" alt="Carrinho de Compras">
-              <span class="notification-text">99</span>
-<!-- 
-              <div class="login-hover">
-                <p> Cadastre-se </p>
-                <p> Login </p>
-              </div> -->
-            </div>    
+          <div class="column user-login-shopping grid-1">
+            <img src="./images/login.png" class="user" alt="Usuário de Login">
+            <ul class="login-hover">
+              <li><a> Cadastre-se </a></li>
+              <li><a> Login </a></li>
+            </ul>
+            <img src="./images/carrinho.png" data-modal="open" class="shopping-cart" alt="Carrinho de Compras">
+            <span class="notification-text"> 0 </span>
+
+
+          </div>
         </div>
 
-      </div> 
+      </div>
     </section>
 
     <section class="header-menu-section">
@@ -48,7 +52,7 @@
             <li class="menu-category">
               <a href="#" class="category-link"> Categoria lorem </a>
             </li>
-            
+
             <li class="menu-category">
               <a href="" class="category-link"> Categoria </a>
 
@@ -75,41 +79,35 @@
 
             <li class="menu-category">
               <a href="" class="category-link"> Categoria lorem ipsum </a>
-
-              <ul class="menu-subcategory">
-                <li><a href=""> Subcategoria lorem </a></li>
-                <li><a href=""> Subcategoria </a></li>
-                <li><a href=""> Subcategoria lorem ipsum </a></li>
-                <li><a href=""> Subcategoria lorem </a></li>
-                <li><a href=""> Subcategoria </a></li>
-              </ul>
             </li>
 
             <li class="menu-category">
               <a href="" class="category-link"> Categoria ipsum </a>
-
-              <ul class="menu-subcategory">
-                <li><a href=""> Subcategoria lorem </a></li>
-                <li><a href=""> Subcategoria </a></li>
-                <li><a href=""> Subcategoria lorem ipsum </a></li>
-                <li><a href=""> Subcategoria lorem </a></li>
-                <li><a href=""> Subcategoria </a></li>
-              </ul></li>
-        
-            <li>
-              <a href=""><img src="./images/ver mais.png" alt="Botão Ver mais"></a>
             </li>
           </ul>
+
+            <div>
+              <img src="./images/ver mais.png" alt="Botão Ver mais" class="menu-mobile">
+            </div>
+        
         </nav>
       </div>
     </section>
   </header>
 
   <section class="banner">
-    <img src="./images/banner.png" class="banner-background" alt="Imagem de animais">
-    
-    <div class="container">
-      <div class="owl-carousel">
+    <div class="slideshow-container"></div>
+    <!-- <div class="mySlides fade"> -->
+      <img src="./images/banner.png" class="banner-background" alt="Imagem de animais">
+      <!-- <img src="./images/banner.png" class="banner-background" alt="Imagem de animais"> -->
+
+
+      <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+    </div>
+
+
   </section>
 
   <section class="section-items">
@@ -122,60 +120,129 @@
 
   <section class="section-products">
     <div class="row container">
+
       <div class="section-products-content">
         <h2 class="title"> Novidades </h2>
-        
-        <div class="section-products-content-items">
-          <div class="column grid-3 item-product">
-            <div class="item-product-image">
-              <img src="./images/new-4.png" alt="Imagens das novidades">
-              <div class="item-produt-image-hover">
-                <a href="" data-id="9" class="button"> Compra rápida </a>
-              </div>
-            </div>
-            <p class="item-product-name"> Lorem ipsum dolor summit </p>
-            <span class="item-product-price"> R$ 99,99 </span>
-          </div>
-          
-          <div class="column grid-3 item-product">
-            <div class="item-product-image">
-              <img src="./images/new-3.png" alt="Imagens das novidades">
-              <div class="item-produt-image-hover">
-                <a href="" data-id="10" class="button"> Compra rápida </a>
-              </div>
-            </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="item-product-price"> R$ 99,99 </span>
-              <p> 99x de R$99,99 </p> 
-            <span class="item-product-observation"> 50% OFF </span>
-          </div>
 
-          <div class="column grid-3 item-product">
-            <div class="item-product-image">
-              <img src="./images/new-1.png" alt="Imagens das novidades">
-              <div class="item-produt-image-hover">
-                <a href="" data-id="11" class="button"> Compra rápida </a>
+        <div class="slideshow-container">
+          <div class="section-products-content-items">
+
+            <div class="mySlides fade">
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-4.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="9" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="item-product-price"> R$ 99,99 </span>
+              </div>
+      
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-3.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="10" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="item-product-price"> R$ 99,99 </span>
+                <p> 99x de R$99,99 </p>
+                <span class="item-product-observation"> 50% OFF </span>
+              </div>
+
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-1.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="11" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="previous-price"> R$ 99,99 </span>
+                <span class="item-product-price"> R$ 99,99 </span>
+              </div>
+
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-2.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="12" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="previous-price"> R$ 99,99 </span>
+                <span class="item-product-price"> R$ 99,99 </span>
+                <p> 99x de R$99,99 </p>
+                <span class="item-product-observation"> Novo </span>
+              </div>
+            </div> 
+            
+            <div class="mySlides fade">
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-3.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="10" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="item-product-price"> R$ 99,99 </span>
+                <p> 99x de R$99,99 </p>
+              </div>
+
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-4.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="9" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="item-product-price"> R$ 99,99 </span>
+                <span class="item-product-observation"> 50% OFF </span>
+              </div>
+
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-2.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="12" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="previous-price"> R$ 99,99 </span>
+                <span class="item-product-price"> R$ 99,99 </span>
+                <p> 99x de R$99,99 </p>
+              </div>
+              
+              <div class="column grid-3 item-product">
+                <div class="item-product-image">
+                  <img src="./images/new-1.png" alt="Imagens das novidades">
+                  <div class="item-produt-image-hover">
+                    <a href="" data-id="11" class="button"> Compra rápida </a>
+                  </div>
+                </div>
+                <p class="item-product-name"> Lorem ipsum dolor summit </p>
+                <span class="previous-price"> R$ 99,99 </span>
+                <span class="item-product-price"> R$ 99,99 </span>
+                <span class="item-product-observation"> Novo </span>
               </div>
             </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="previous-price"> R$ 99,99 </span>
-              <span class="item-product-price"> R$ 99,99 </span>
-          </div>
-
-          <div class="column grid-3 item-product">
-            <div class="item-product-image">
-              <img src="./images/new-2.png" alt="Imagens das novidades">
-            <div class="item-produt-image-hover">
-              <a href="" data-id="12" class="button"> Compra rápida </a>
-            </div>
-            </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="previous-price"> R$ 99,99 </span>
-              <span class="item-product-price"> R$ 99,99 </span>
-              <p> 99x de R$99,99 </p>
-            <span class="item-product-observation"> Novo </span>
           </div>
         </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
       </div>
     </div>
   </section>
@@ -191,7 +258,7 @@
     <div class="row container">
       <div class="section-products-content">
         <h2 class="title"> Destaques </h2>
-        
+
         <div class="section-products-content-items">
           <div class="column grid-3 item-product">
             <div class="item-product-image">
@@ -203,7 +270,7 @@
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
             <span class="item-product-price"> R$ 99,99 </span>
           </div>
-          
+
           <div class="column grid-3 item-product">
             <div class="item-product-image">
               <img src="./images/new-3.png" alt="Imagens das novidades">
@@ -211,9 +278,9 @@
                 <a href="" data-id="2" class="button"> Compra rápida </a>
               </div>
             </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="item-product-price"> R$ 99,99 </span>
-              <p> 99x de R$99,99 </p> 
+            <p class="item-product-name"> Lorem ipsum dolor summit </p>
+            <span class="item-product-price"> R$ 99,99 </span>
+            <p> 99x de R$99,99 </p>
             <span class="item-product-observation"> 50% OFF </span>
           </div>
 
@@ -224,22 +291,22 @@
                 <a href="" data-id="3" class="button"> Compra rápida </a>
               </div>
             </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="previous-price"> R$ 99,99 </span>
-              <span class="item-product-price"> R$ 99,99 </span>
+            <p class="item-product-name"> Lorem ipsum dolor summit </p>
+            <span class="previous-price"> R$ 99,99 </span>
+            <span class="item-product-price"> R$ 99,99 </span>
           </div>
 
           <div class="column grid-3 item-product">
             <div class="item-product-image">
               <img src="./images/new-2.png" alt="Imagens das novidades">
-            <div class="item-produt-image-hover">
-              <a href="" data-id="4" class="button"> Compra rápida </a>
+              <div class="item-produt-image-hover">
+                <a href="" data-id="4" class="button"> Compra rápida </a>
+              </div>
             </div>
-            </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="previous-price"> R$ 99,99 </span>
-              <span class="item-product-price"> R$ 99,99 </span>
-              <p> 99x de R$99,99 </p>
+            <p class="item-product-name"> Lorem ipsum dolor summit </p>
+            <span class="previous-price"> R$ 99,99 </span>
+            <span class="item-product-price"> R$ 99,99 </span>
+            <p> 99x de R$99,99 </p>
             <span class="item-product-observation"> Novo </span>
           </div>
 
@@ -253,7 +320,7 @@
             <p class="item-product-name"> Lorem ipsum dolor summit </p>
             <span class="item-product-price"> R$ 99,99 </span>
           </div>
-          
+
           <div class="column grid-3 item-product">
             <div class="item-product-image">
               <img src="./images/new-3.png" alt="Imagens das novidades">
@@ -261,34 +328,34 @@
                 <a href="" data-id="6" class="button"> Compra rápida </a>
               </div>
             </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="item-product-price"> R$ 99,99 </span>
-              <p> 99x de R$99,99 </p> 
+            <p class="item-product-name"> Lorem ipsum dolor summit </p>
+            <span class="item-product-price"> R$ 99,99 </span>
+            <p> 99x de R$99,99 </p>
           </div>
 
           <div class="column grid-3 item-product">
-            <div class="item-product-image">
+            <div class="item-product-image ">
               <img src="./images/new-1.png" alt="Imagens das novidades">
               <div class="item-produt-image-hover">
                 <a href="" data-id="7" class="button"> Compra rápida </a>
               </div>
             </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="previous-price"> R$ 99,99 </span>
-              <span class="item-product-price"> R$ 99,99 </span>
+            <p class="item-product-name"> Lorem ipsum dolor summit </p>
+            <span class="previous-price"> R$ 99,99 </span>
+            <span class="item-product-price"> R$ 99,99 </span>
           </div>
 
           <div class="column grid-3 item-product">
             <div class="item-product-image">
               <img src="./images/new-2.png" alt="Imagens das novidades">
-            <div class="item-produt-image-hover">
-              <a href="" data-id="8" class="button"> Compra rápida </a>
+              <div class="item-produt-image-hover">
+                <a href="" data-id="8" class="button"> Compra rápida </a>
+              </div>
             </div>
-            </div>
-              <p class="item-product-name"> Lorem ipsum dolor summit </p>
-              <span class="previous-price"> R$ 99,99 </span>
-              <span class="item-product-price"> R$ 99,99 </span>
-              <p> 99x de R$99,99 </p>
+            <p class="item-product-name"> Lorem ipsum dolor summit </p>
+            <span class="previous-price"> R$ 99,99 </span>
+            <span class="item-product-price"> R$ 99,99 </span>
+            <p> 99x de R$99,99 </p>
           </div>
         </div>
 
@@ -308,7 +375,7 @@
           <img src="./images/icone-logo.png">
           <span> <b> Entrega gratuita </b> a partir de R$99 </span>
         </div>
- 
+
         <div class="column grid-3 benefits-list-text">
           <img src="./images/icone-logo.png">
           <span> <b> Parcelamento </b> sem juros </span>
@@ -324,15 +391,15 @@
         <h2 class="title-news"> Assine nossa Newsletter </h2>
         <p class="subtitle-news"> Cadastre-se para receber nossas novidades e descontos exclusivos! </p>
 
-      <div class="newsletter-form">
-        <form id="form-newsletter" method="POST" action="#">
-          <input type="text" id="nome" name="nome" class="column grid-2" placeholder="Nome"> 
-          <input type="email" id="email" name="email" class="column grid-3" placeholder="E-mail">
-          <button id="enviar" name="enviar" class="column grid-1 button btn-form" type="submit"> Enviar </button>
-        </form>
-      </div>
-      </div>
-    </div>  
+        <div class="newsletter-form">
+          <form id="form-newsletter" method="POST" action="#">
+            <input type="text" id="nome" name="nome" class="column grid-2" placeholder="Nome">
+            <input type="email" id="email" name="email" class="column grid-3" placeholder="E-mail">
+            <button id="enviar" name="enviar" class="column grid-1 button btn-form" type="submit"> Enviar </button>
+          </form>
+        </div>
+        </div>
+    </div>
   </section>
 
   <footer>
@@ -345,24 +412,24 @@
               <a href=""><img src="./images/facebook.svg" alt="Facebook" class="facebook"></a>
               <a href=""><img src="./images/Forma 1.svg" alt="Instagram" class="instagram"></a>
               <a href=""><img src="./images/Shape 3.svg" alt="Twitter" class="twitter"></a>
-            </div>  
+            </div>
             <p> © 2019 • CNPJ 00.000.000/0000-00 </p>
             <p> Rua Tal de Tal, 123 - Cidade, Estado </p>
           </div>
 
           <div class="column grid-3 pet-store-about-footer">
             <h3 class="subtitle-footer"> Pet Store </h3>
-              <p> Quem somos </p>
-              <p> Como comprar </p>
-              <p> Trocas e Devoluções </p>
-              <p> Fretes e Entregas </p>
+            <p> Quem somos </p>
+            <p> Como comprar </p>
+            <p> Trocas e Devoluções </p>
+            <p> Fretes e Entregas </p>
           </div>
 
           <div class="column grid-3 pet-store-about-footer">
             <h3 class="subtitle-footer"> Contato </h3>
-              <p> (99) 9999-9999 </p>
-              <p> (99) 9999-9999 </p>
-              <p> petstore@petstore.com </p>
+            <p> (99) 9999-9999 </p>
+            <p> (99) 9999-9999 </p>
+            <p> petstore@petstore.com </p>
           </div>
 
           <div class="column grid-2 footer-pay">
@@ -386,8 +453,8 @@
       <div class="container">
         <div class="copy-content">
           <span> Tecnologia e Desenvolvimento </span>
-          <img src="./images/seri.e.png" alt="Logo Seri.e">
-          <img src="./images/nuvemshop.png" alt="Logo NuvemShop">
+          <img src="./images/seri.e.png" alt="Logo Seri.e" class="serie">
+          <img src="./images/nuvemshop.png" alt="Logo NuvemShop" class="nuvemshop">
         </div>
       </div>
     </section>
@@ -395,25 +462,27 @@
     <section class="shopping-cart-hover">
       <div class="container">
         <div class="modal grid-5">
-          <div class="product-titles">
-            <h2> Seu carrinho </h2>
-            <button data-modal="close" class="close"> X </button>
+          <div class="product-titles row">
+            <h2 class="column"> Seu carrinho </h2>
+            <button data-modal="close" class="close column"> X </button>
           </div>
-      
-          <span class="modal-text"> Produtos </span>
-          <span class="modal-text subtotal"> Subtotal </span>
+
+          <div class="products-subtitles">
+            <span class="modal-text"> Produtos </span>
+            <span class="modal-text subtotal"> Subtotal </span>
+          </div>
 
           <div class="list-products">
-            <div class="product-shopping-cart row">
+            <div class="product-shopping-cart-html row">
               <img src="./images/produto-carrinho.png" alt="Produto Carrinho" class="column">
 
               <div class="product-description column">
                 <p> Lorem ipsum dolor summit </p>
                 <p> (Azul, P) </p>
                 <p> R$ 99,99 </p>
+                <input type="button" value="-">
                 <input type="text" id="campo">
                 <input type="button" value="+">
-                <input type="button" value="-">
               </div>
 
               <div class="product-price-delete column">
@@ -422,11 +491,35 @@
               </div>
             </div>
           </div>
+
+          <div class="products-total">
+            <span class="modal-text"> Subtotal </span>
+            <span class="modal-text subtotal" data-modal="preco"> R$ 0 </span>
+          </div>
+
+          <div class="products-cep">
+            <span> Digite seu CEP: </span>
+            <input type="text" placeholder="00000-000">
+            <button> Calcule o frete </button>
+          </div>
+
+          <div class="products-total total">
+            <span class="modal-text"> Total </span>
+            <span class="modal-text subtotal" data-modal="final"> R$ 0 </span>
+          </div>
+
+          <div class="products-finish">
+            <span>
+              < </span>
+                <span class="back"> Continuar comprando </span>
+                <button type="submit" class="button"> Finalizar compra </button>
+          </div>
+
         </div>
       </div>
 
-    
-  
+
+
 
     </section>
 
@@ -439,13 +532,16 @@
 
   </footer>
 
-  
 
 
-  
 
 
+
+
+  <script src="./js/carousel.js"></script>
   <script src="./js/script.js"></script>
 
+
 </body>
-</html> 
+
+</html>

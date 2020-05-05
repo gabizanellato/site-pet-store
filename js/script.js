@@ -1,6 +1,7 @@
 // Abrir e fechar carrinho
 const botaoCarrinho = document.querySelector('[data-modal="open"]')
 const botaoFechar = document.querySelector('[data-modal="close"]')
+const botaoVoltar = document.querySelector('.back')
 const modal = document.querySelector('.shopping-cart-hover')
 
 const campoProduto = document.querySelector('#campo')
@@ -13,24 +14,25 @@ sessionStorage.setItem('totalItens', JSON.stringify(0));
 
 //produtos que viriam da API por exemplo
 const produtos = [
-  { id: '1', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-4.png' },
-  { id: '2', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-3.png' },
-  { id: '3', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-1.png' },
-  { id: '4', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-2.png' },
-  { id: '5', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-4.png' },
-  { id: '6', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-3.png' },
-  { id: '7', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-1.png' },
-  { id: '9', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-4.png' },
-  { id: '10', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-3.png' },
-  { id: '11', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-1.png' },
-  { id: '12', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, imagem: './images/new-2.png' }]
+  { id: '1', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "P", imagem: './images/new-4.png' },
+  { id: '2', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "M", imagem: './images/new-3.png' },
+  { id: '3', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "G", imagem: './images/new-1.png' },
+  { id: '4', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "G", imagem: './images/new-2.png' },
+  { id: '5', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "P", imagem: './images/new-4.png' },
+  { id: '6', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "M", imagem: './images/new-3.png' },
+  { id: '7', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "G", imagem: './images/new-1.png' },
+  { id: '8', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "G", imagem: './images/new-2.png' },
+  { id: '9', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "P", imagem: './images/new-4.png' },
+  { id: '10', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "M", imagem: './images/new-3.png' },
+  { id: '11', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "G", imagem: './images/new-1.png' },
+  { id: '12', nome: 'Lorem ipsum dolor summit', selecionado: 1, total: 99.99, valor: 99.99, tamanho: "G", imagem: './images/new-2.png' }]
 
 
 function Notificacao(funcao, valor) {
   let item = JSON.parse(sessionStorage.getItem('totalItens'));
   if (funcao == 'somar') {
     setandoValorNotificacao(item + valor);
-  } else if('reset') {
+  } else if ('reset') {
     setandoValorNotificacao(valor);
   } else {
     setandoValorNotificacao(item - valor);
@@ -55,6 +57,8 @@ function fecharCarrinho(event) {
 
 botaoCarrinho.addEventListener('click', abrirCarrinho)
 botaoFechar.addEventListener('click', fecharCarrinho)
+botaoVoltar.addEventListener('click', fecharCarrinho)
+
 
 
 
@@ -90,8 +94,8 @@ function adicionarItemCarrinho(objeto) {
 
     carrinho.push(objeto);
   }
-
   sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
+  subTotal();
 }
 //Função para deletar um item no Carrinho
 function removerItemCarrinho(id, delecaoCompleta) {
@@ -133,6 +137,7 @@ function removerItemCarrinho(id, delecaoCompleta) {
   }
 
   sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
+  subTotal();
 }
 
 
@@ -147,11 +152,11 @@ function adicionandoProdutoAoCarrinhoHTML(produto) {
     <img style="max-width: 72px;" src="${produto.imagem}" alt="Produto Carrinho" class="column">
     <div class="product-description column">
       <p> ${produto.nome} </p>
-      <p> (Azul, P) </p>
+      <p> (Azul, ${produto.tamanho}) </p>
       <p> R$ ${String(produto.valor).replace(".", ",")} </p>
+      <input type="button" id="sub-${produto.id}" class="sub" value="-">
       <input type="text" value="${produto.selecionado}" id="campo">
       <input type="button" id="add-${produto.id}" class="add" value="+">
-      <input type="button" id="sub-${produto.id}" class="sub" value="-">
     </div>
     <div class="product-price-delete column">
       <p> R$ ${String(produto.total).replace(".", ",")} </p>
@@ -222,3 +227,29 @@ ItensParaCompra.forEach(item => {
   });
 
 });
+
+
+function subTotal() {
+  const valorTotal = document.querySelector('[data-modal="preco"]')
+  const valorSubtotal = document.querySelector('[data-modal="final"]')
+  let soma = 0;
+  let carrinho = pegarCarrinho();
+
+  carrinho.forEach(item => {
+    soma += Number(item.total);
+  });
+  valorSubtotal.innerHTML = `R$ ${soma.toFixed(2)}`; 
+  valorTotal.innerHTML = `R$ ${soma.toFixed(2)}`; 
+}
+
+
+
+const menuMobile = document.querySelector('.menu-mobile')
+const menuList = document.querySelector('.menu-items')
+
+function menuResponsivo(event) {
+  menuMobile.classList.toggle('ativo')
+  menuList.classList.toggle('ativo')
+}
+
+menuMobile.addEventListener('click', menuResponsivo)
