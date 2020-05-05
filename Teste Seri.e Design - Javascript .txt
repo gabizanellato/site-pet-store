@@ -1,0 +1,159 @@
+************************************
+****  TESTE SÉRI.E DESIGN - JS  ****
+************************************
+
+
+Aqui são listados alguns testes de Javascript. Você pode colocar as respostas aqui mesmo, em baixo da pergunta.
+Você pode usar JQuery a vontade, embora seja preferível o código em Javascript puro.
+
+
+1) Faça um laço for de 0 a 100 que retorne um array com todos os números que são divisíveis por 7;
+
+const arrayDeNumeros = []
+
+for (var numero = 0; numero < 100; numero++ ){
+  if (numero % 7 == 0)
+    arrayDeNumeros.push(numero)
+    console.log(arrayDeNumeros)
+}
+
+
+2) Crie uma função que receba dois parâmetros, o primeiro chamado 'texto' - string - e o segundo chamado 'vezes' - numero -. Esta função tem como objetivo retornar uma nova string com o texto repetido, separado por virgula, quantas vezes foi passado no parâmetro 'vezes'. Exibir esta nova string no console.
+
+
+function RetornaTextoSeparadoPorVirgula(texto, vezes) {
+  var textoCompleto = []; 
+  for(var i = 0; i < vezes; i++){
+      textoCompleto.push(texto);
+   }
+  return textoCompleto.join(",");
+}
+
+console.log(RetornaTextoSeparadoPorVirgula("Texto",3))
+
+
+3) Suponha que temos uma div com a classe 'pai' e outra div com a classe 'filho', ambas são divs independentes, que não estão dentro de nenhuma outra. Como seria caso fosse preciso colocar a div 'filho' dentro da div 'pai' ?
+
+const classePai = document.querySelector('.pai')
+const classeFilho = document.querySelector('.filho')
+
+classePai.insertAdjacentElement('beforeend', classeFilho)
+
+4) Suponha que temos três nós de parágrafo dentro de uma div. Como seria para alterar o texto do segundo parágrafo para 'Texto alterado' e inserir uma classe 'last' no último parágrafo?
+
+const segundoParagrafo = document.querySelector('div:nth-child(2)')
+segundoParagrafo.innerHTML = "Texto alterado"
+
+const ultimoParagrafo = document.querySelector('div:last-child()')
+ultimoParagrafo.classList.add('last')
+
+
+5) Crie uma função que trate o texto ' Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à direita. ' e retorna uma nova string com a palavra sem as vogais.
+
+const textoModificado = ' Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à direita. '
+textoModificado.replace(/(a|e|i|o|u)/gi, '');
+
+console.log(textoModificado)
+
+
+6) Utilize o operador ternário em uma função que recebe um número - idade - e retorne uma string com um texto dizendo se o valor passado refere-se a maior de idade ou menor de idade.
+
+function validandoIdade(idade){
+  return idade >= 18 ? 'Maior de idade' : 'Menor de idade';
+}
+
+
+7) No objeto:
+
+  var obj = {
+    nomeObj : 'Mouse',
+    pesoObj: '150g'
+  }
+
+Como seria se fosse necessário alterar os atributos neste objeto em uma função que o recebe a propriedade nomeObj para 'Teclado' e o pesoObj para '500g' e indexar a um array os valores deste objeto?
+
+function Objeto (nomeObj, pesoObj){
+  this.nomeObj = nomeObj,
+  this.pesoObj = pesoObj
+}
+
+const novoObjeto = new Objeto('Teclado', '500g')
+
+
+8) No texto 'Eu quero trabalhar na Seri.e Design', retorne em variáveis diferentes:
+
+const queroTrabalhar = "Eu quero trabalhar na Seri.e Design"
+
+  a) O texto de trás para frente substituindo os espaços em branco por pontos de exclamação.
+	const textoInvertido = queroTrabalhar.split().reverse().join().replace(' ', '!')
+
+  b) A ultima palavra do texto .
+	const ultimaPalavra = queroTrabalhar.split(' ').pop();
+
+  c) A quantidade de caracteres do texto.
+	const caracteres = queroTrabalhar.length
+
+  d) O tipo de alguma variável criada acima.
+	const tipoVariavel = typeof caracteres
+
+
+
+9) Em uma lista de 10 divs , como seria caso fosse necessário atribuir uma propriedade 'data-id' com o seu valor sendo a posição que se encontra a div na lista?
+
+const divs = document.querySelectorAll('body > div');
+  divs.forEach((item, indice) => {
+    item.setAttribute('data-id', indice);
+});
+
+10) Suponha que um menu é composto por duas divs principais, a div 'container', que contém os items do primeiro nível do menu, e a div 'container__content', que está inclusa para cada uma das divs 'container' que existir itens de menu atrelado à elas. Faça um bloco javascript que trate o evento de click na div 'container' para ativar com uma classe 'active' a div 'container_content' que se encontra dentro da div clicada.
+
+const primeiroDivMenu = document.querySelector('.container')
+const divMenuContent = document.querySelector('.container_content')
+
+function adicionaClasse(){
+  primeiroDivMenu.classList.add('active')
+  divMenuContent.classList.add('active')
+}
+
+primeiroDivMenu.addEventListener('click', adicionaClasse)
+
+11) Em um container de 1170px de largura, como saber se a div '<div class="w" style="width: 1980px">' esta extrapolando a largura do container?
+
+const classeAltura = document.querySelector('.w')
+
+const alturaElemento = classeAltura.clientWidth
+
+if (alturaElemento > 1170){
+  console.log ("Está maior que o container")
+}
+
+12) O que o bloco de código seguinte está fazendo?
+
+  function observer(){
+  	var target = '';
+  	var restSecs = 0 ;
+  	var intervalObserver = setInterval(function(){
+  		target = document.querySelector('footer .content__bottom');
+  		if( $(target).length >= 1 && restSecs <= 5 ){
+
+  		}
+  		else if( restSecs == 5 ){
+  			clearInterval(intervalObserver);
+  		}
+  		else{
+  			restSecs++;
+  		}
+  	}, 1000);
+  }observer();
+
+	O observer seria um observador, que no caso espera algo acontecer e realiza outra função
+
+
+
+
+
+
+
+
+
+.
